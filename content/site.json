@@ -1,0 +1,464 @@
+{
+  "name": "Jesse Giddings",
+  "tagline": "Unit stills and behind-the-scenes content for film and television.",
+  "description": "Jesse Giddings is a unit stills and BTS photographer for film and television, shooting for FOX, The CW, ABC, CBS, NBC, TNT, TBS, truTV and HBO Max.",
+  "email": "hello@jessegiddings.com",
+  "instagram": "jessegiddings",
+  "hero": {
+    "folder": "the-alienist-tnt",
+    "file": "TNT_TheAlienist_B2-090-2.jpg",
+    "caption": "The Alienist · TNT · Budapest"
+  },
+  "credits_strip": [
+    "FOX",
+    "The CW",
+    "ABC",
+    "CBS",
+    "NBC",
+    "TNT",
+    "TBS",
+    "truTV",
+    "HBO Max",
+    "Warner Bros."
+  ],
+  "work_intro": "Episodic and feature unit stills, key art and BTS coverage, from Budapest and Prague to Vancouver and Los Angeles.",
+  "productions": [
+    {
+      "folder": "the-alienist-tnt",
+      "title": "The Alienist",
+      "network": "TNT",
+      "year": "2017",
+      "location": "Budapest",
+      "order": [
+        "TNT_TheAlienist_B2-090-2.jpg"
+      ]
+    },
+    {
+      "folder": "good-behavior-s1-tnt",
+      "title": "Good Behavior",
+      "detail": "Season 1",
+      "network": "TNT",
+      "year": "2016",
+      "location": "",
+      "order": [
+        "TNTday1-3326-3.jpg"
+      ]
+    },
+    {
+      "folder": "new-girl-s7-fox",
+      "title": "New Girl",
+      "detail": "Season 7",
+      "network": "FOX",
+      "year": "2017",
+      "location": "Los Angeles"
+    },
+    {
+      "folder": "last-man-on-earth-s4-fox",
+      "title": "The Last Man on Earth",
+      "detail": "Season 4",
+      "network": "FOX",
+      "year": "2017–18",
+      "location": "Los Angeles",
+      "order": [
+        "LMOE-S4_418-SC28pt_012.jpg"
+      ]
+    },
+    {
+      "folder": "jane-the-virgin-s4-cw",
+      "title": "Jane the Virgin",
+      "detail": "Episode 416",
+      "network": "The CW",
+      "year": "2018",
+      "location": "Los Angeles"
+    },
+    {
+      "folder": "monsters-of-god-tnt",
+      "title": "Monsters of God",
+      "detail": "Pilot",
+      "network": "TNT",
+      "year": "2016",
+      "location": ""
+    },
+    {
+      "folder": "dumpster-dive",
+      "title": "Dumpster Dive",
+      "network": "",
+      "year": "",
+      "location": ""
+    },
+    {
+      "folder": "candy-crush-tbs",
+      "title": "Candy Crush",
+      "network": "TBS",
+      "year": "2017",
+      "location": ""
+    }
+  ],
+  "portraits": {
+    "title": "Portraits & Key Art",
+    "folder": "portraits-key-art",
+    "network": ""
+  },
+  "bts": {
+    "intro": "I spent twelve years on the other side of the camera as a host at MuchMusic and E! News, so I know how to move around talent, publicists and a working set without slowing anyone down. On set I capture the stills, verticals and BTS moments that marketing and social teams actually need, delivered fast and organized for the edit.",
+    "images": [
+      {
+        "folder": "western-APC-unknown",
+        "file": "APC_0791.jpg",
+        "caption": "Western, on set"
+      },
+      {
+        "folder": "western-APC-unknown",
+        "file": "APC_0824.jpg",
+        "caption": "Western, on set"
+      }
+    ],
+    "recent": [
+      "Full Bloom · HBO Max · social producer on set, marketing capture, time-lapses",
+      "Miracle Workers: Dark Ages and Oregon Trail · TBS · on-set social capture and promo shoots",
+      "Animal Kingdom · TNT · BTS and EPK capture",
+      "Snowpiercer · TNT · BTS photography and social content",
+      "I Am the Night · TNT · BTS for social"
+    ],
+    "embeds": [],
+    "embeds_help": "Add Instagram post/reel URLs or YouTube URLs here, e.g. https://www.instagram.com/p/XXXX/ or https://www.youtube.com/watch?v=XXXX"
+  },
+  "network_tests": {
+    "text": "Before a pilot shoots, networks need to see the cast in hair, makeup and wardrobe. I bring a full lighting setup to the stage or backlot, shoot the entire cast, and deliver edited, network-ready images fast. Recent: Single Parents (ABC).",
+    "images": []
+  },
+  "assignment": {
+    "intro": "Alongside production work, I've spent years photographing humanitarian stories, including documenting the refugee crisis across Greece and Serbia for International Medical Corps, and projects in Kenya, India and Bhutan.",
+    "folder": "humanitarian-and-assignment",
+    "images": [
+      {
+        "file": "IMCserbia-732_new1.jpg",
+        "caption": "Šid, Serbia · International Medical Corps",
+        "alt": "A father carries his young son off a train in Šid, Serbia, after a 15-hour ride from the Macedonian border"
+      },
+      {
+        "file": "738.jpg",
+        "caption": "",
+        "alt": "A small girl in a pink floral hood looks up from her mother's arms in a crowd of refugees"
+      },
+      {
+        "file": "IMCserbia-662.jpg",
+        "caption": "Šid, Serbia · International Medical Corps",
+        "alt": "Refugees look out from the windows of a train in Šid, Serbia"
+      },
+      {
+        "file": "IMCserbia-1654.jpg",
+        "caption": "Šid, Serbia · International Medical Corps",
+        "alt": "Refugees board a train in Šid, Serbia, bound for the Croatian border"
+      },
+      {
+        "file": "IMCgreece-1623.jpg",
+        "caption": "Greece · International Medical Corps",
+        "alt": "A man sits among donated clothing inside a tent in Greece"
+      },
+      {
+        "file": "IMCserbia-2051.jpg",
+        "caption": "Serbia · International Medical Corps",
+        "alt": "A Moroccan refugee, stranded for two months, in low light"
+      },
+      {
+        "file": "16117895594_a1930df457_k.jpg",
+        "caption": "India",
+        "alt": "A boy sits in a shop doorway beside an older man in India"
+      },
+      {
+        "file": "5E4A2154.jpg",
+        "caption": "India",
+        "alt": "A barber shaves a customer in a small purple-walled shop in India"
+      },
+      {
+        "file": "mommapose1.jpg",
+        "caption": "Kenya",
+        "alt": "A Maasai woman in beaded jewelry rests her chin on her hand"
+      },
+      {
+        "file": "16553570769_eeb1d1e73a_k.jpg",
+        "caption": "",
+        "alt": "A small boy in a purple shirt holds a bowl in a doorway"
+      },
+      {
+        "file": "warriorwatch1.jpg",
+        "caption": "Kenya",
+        "alt": "A young Maasai man stands in tall grass"
+      },
+      {
+        "file": "16602275249_4c6cecc509_k.jpg",
+        "caption": "Paro Taktsang, Bhutan",
+        "alt": "The Tiger's Nest monastery on a cliff above a green valley in Bhutan"
+      }
+    ]
+  },
+  "about": "I'm a photographer and content creator based between Los Angeles and British Columbia. I've shot unit stills, BTS and social content on more than 30 productions for FOX, The CW, ABC, CBS, NBC, TNT, TBS, truTV and HBO Max, from 9-1-1, The Orville and New Girl to All American, The Alienist in Budapest and Snowpiercer in Vancouver. Before that I was a television host and producer, earning three Daytime Emmy nominations with E! News. I'm available for episodic, feature and campaign work in LA, Vancouver and on location.",
+  "contact": {
+    "heading": "Booking an upcoming production? Let's talk.",
+    "note": "Prints available on request."
+  },
+  "credits": [
+    {
+      "network": "FOX",
+      "shows": [
+        [
+          "New Girl",
+          "S7",
+          "2017",
+          "Unit stills"
+        ],
+        [
+          "The Last Man on Earth",
+          "S4",
+          "2017–18",
+          "Unit stills"
+        ],
+        [
+          "9-1-1",
+          "S1–S3",
+          "2018–19",
+          "Unit stills"
+        ],
+        [
+          "The Orville",
+          "S2",
+          "2018",
+          "Unit stills"
+        ],
+        [
+          "Beat Shazam",
+          "S3",
+          "2019",
+          "Unit stills"
+        ],
+        [
+          "Ghosted",
+          "S1",
+          "2018",
+          "Unit stills"
+        ],
+        [
+          "Mixtape",
+          "Pilot",
+          "2018",
+          "Unit stills"
+        ]
+      ]
+    },
+    {
+      "network": "The CW / Warner Bros.",
+      "shows": [
+        [
+          "All American",
+          "Pilot, S1",
+          "2018",
+          "Unit stills, BTS"
+        ],
+        [
+          "Jane the Virgin",
+          "S4, S5",
+          "2018",
+          "Unit stills, BTS"
+        ]
+      ]
+    },
+    {
+      "network": "ABC",
+      "shows": [
+        [
+          "Single Parents",
+          "Pilot",
+          "2018",
+          "Network test photography"
+        ],
+        [
+          "Untitled Hannah Simone pilot",
+          "Pilot",
+          "2019",
+          "Unit stills"
+        ]
+      ]
+    },
+    {
+      "network": "CBS",
+      "shows": [
+        [
+          "The Price Is Right",
+          "",
+          "2018",
+          "Stills"
+        ]
+      ]
+    },
+    {
+      "network": "NBC",
+      "shows": [
+        [
+          "A.P. Bio",
+          "S2",
+          "2018",
+          "Unit stills"
+        ]
+      ]
+    },
+    {
+      "network": "TNT",
+      "shows": [
+        [
+          "Good Behavior",
+          "S1",
+          "2016",
+          "Stills and video"
+        ],
+        [
+          "Monsters of God",
+          "Pilot",
+          "2016",
+          "Social photography"
+        ],
+        [
+          "The Alienist",
+          "S1",
+          "2017",
+          "Social photography, Budapest"
+        ],
+        [
+          "Animal Kingdom",
+          "S3, S6",
+          "2018, 2021",
+          "Social, BTS and EPK capture"
+        ],
+        [
+          "I Am the Night",
+          "",
+          "2018–19",
+          "BTS for social"
+        ],
+        [
+          "Snowpiercer",
+          "S1, S4",
+          "2018, 2022",
+          "BTS photography, social content"
+        ]
+      ]
+    },
+    {
+      "network": "TBS",
+      "shows": [
+        [
+          "Search Party",
+          "",
+          "2016",
+          "Social stills"
+        ],
+        [
+          "Candy Crush",
+          "",
+          "2017",
+          "Stills"
+        ],
+        [
+          "Guest Book",
+          "S2",
+          "2018",
+          "Stills"
+        ],
+        [
+          "Chad",
+          "Pilot, S2",
+          "2019, 2021",
+          "Stills, marketing shoot"
+        ],
+        [
+          "American Dad 300th table read",
+          "",
+          "2019",
+          "Event stills"
+        ],
+        [
+          "Miracle Workers: Dark Ages",
+          "S2",
+          "2019",
+          "Social coverage"
+        ],
+        [
+          "Miracle Workers: Oregon Trail",
+          "S3",
+          "2021",
+          "On-set social capture, promo shoot"
+        ]
+      ]
+    },
+    {
+      "network": "truTV",
+      "shows": [
+        [
+          "At Home with Amy Sedaris",
+          "S3",
+          "2019",
+          "On-set social capture"
+        ],
+        [
+          "Fast Foodies",
+          "",
+          "2021",
+          "Marketing content"
+        ]
+      ]
+    },
+    {
+      "network": "HBO Max",
+      "shows": [
+        [
+          "Full Bloom",
+          "",
+          "2020",
+          "Social producer, marketing capture"
+        ],
+        [
+          "The Event",
+          "",
+          "2020",
+          "BTS and social coverage"
+        ]
+      ]
+    }
+  ],
+  "more_work": {
+    "title": "Also on set",
+    "note": "Released episodic stills. Full-resolution selects coming soon.",
+    "productions": [
+      {
+        "folder": "911-fox-lowres",
+        "title": "9-1-1",
+        "network": "FOX",
+        "year": "2018–19",
+        "order": [
+          "911-imdb-08.jpg",
+          "911-imdb-02.jpg",
+          "911-imdb-13.jpg"
+        ],
+        "limit": 4
+      },
+      {
+        "folder": "all-american-s1-cw-lowres",
+        "title": "All American",
+        "network": "The CW",
+        "year": "2018",
+        "order": [
+          "aa-imdb-16.jpg",
+          "aa-imdb-03.jpg",
+          "aa-imdb-17.jpg"
+        ],
+        "limit": 4
+      },
+      {
+        "folder": "orville-s2-fox-lowres",
+        "title": "The Orville",
+        "network": "FOX",
+        "year": "2018"
+      }
+    ]
+  }
+}
