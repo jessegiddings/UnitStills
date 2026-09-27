@@ -127,8 +127,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 .feature header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
 .feature h3 { font: 500 30px/1.1 var(--serif); }
 .feature-intro { color: var(--soft); margin: 10px 0 20px; max-width: 60ch; }
-.stills-link { display: inline-block; margin: 0 0 20px; font: 500 11px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--soft); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
-.stills-link:hover { color: var(--text); border-color: var(--text); }
 
 /* Clip tiles: a local thumbnail and a play button; the platform loads on click */
 .clip-grid { display: grid; grid-template-columns: 1fr; gap: 20px 12px; }
@@ -156,6 +154,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   border-style: solid; border-width: 8px 0 8px 13px; border-color: transparent transparent transparent var(--text);
 }
 .clip-platform { position: absolute; top: 12px; left: 12px; font: 500 10px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--soft); text-shadow: 0 1px 6px rgba(0,0,0,.6); }
+.clip-play:hover img { transform: scale(1.03); }
 .clip-play:hover .play, .clip-play:focus-visible .play { background: rgba(13,13,13,.6); transform: scale(1.06); }
 .clip-play:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
 .clip-credit { margin: 8px 0 0; font-size: 12px; line-height: 1.5; font-style: italic; color: var(--muted); }

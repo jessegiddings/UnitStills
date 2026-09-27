@@ -113,14 +113,22 @@ def card(folder, files, title, sub, alt, captions=None, alts=None, cover_class="
     return f'<li>{"".join(links)}</li>'
 
 
-def stills_link(folder, files, title, sub, alt):
-    """A "View N stills" link that opens the production's photos in the lightbox."""
+def stills_tile(folder, files, title, sub, alt, ar="4 / 5"):
+    """A cover tile in the clip grid that opens the production's photos in the lightbox."""
     links = []
+    n = len(files)
     for i, f in enumerate(files):
-        attrs = lightbox_attrs(render_image(folder, f), folder, alt, join(title, sub))
-        links.append(f'<a class="stills-link" {attrs}>View {len(files)} stills</a>' if i == 0
-                     else f'<a hidden {attrs}></a>')
-    return "".join(links)
+        meta = render_image(folder, f)
+        attrs = lightbox_attrs(meta, folder, alt, join(title, sub))
+        if i == 0:
+            cover = img_tag(meta, "", "(max-width: 640px) 100vw, 460px")
+            links.append(
+                f'<a class="clip-play stills" {attrs} aria-label="View {n} production stills from {esc(title)}">'
+                f'{cover}<span class="clip-platform" aria-hidden="true">Stills</span></a>')
+        else:
+            links.append(f'<a hidden {attrs}></a>')
+    label = f"{n} production stills" if n > 1 else "Production still"
+    return f'<li class="clip" style="--ar: {ar}">{"".join(links)}<p class="clip-credit">{label}</p></li>'
 
 
 def tile(meta, group, alt, caption=""):
@@ -218,8 +226,8 @@ def clip_card(title, sub, intro, clips, photos=""):
     tiles = "".join(clip_tile(c, group) for c in clips)
     intro = f'<p class="feature-intro">{esc(intro)}</p>' if intro else ""
     return (f'<li class="feature"><header><h3>{esc(title)}</h3>'
-            f'<p class="card-sub">{esc(sub)}</p></header>{intro}{photos}'
-            f'<ul class="clip-grid">{tiles}</ul></li>')
+            f'<p class="card-sub">{esc(sub)}</p></header>{intro}'
+            f'<ul class="clip-grid">{photos}{tiles}</ul></li>')
 
 
 def build():
@@ -250,7 +258,8 @@ def build():
         if clips:
             intro = p.get("clips_intro") or clip_meta.get(p["title"], {}).get("intro", "")
             cards.append(clip_card(p["title"], sub, intro, clips,
-                                   stills_link(p["folder"], files, title, sub, alt) if files else ""))
+                                   stills_tile(p["folder"], files, p["title"], sub, alt,
+                                               FORMATS.get(clips[0]["format"], "4 / 5")) if files else ""))
         elif files:
             cards.append(card(p["folder"], files, p["title"], sub, alt, p.get("captions")))
     for name, clips in clips_by_production.items():
