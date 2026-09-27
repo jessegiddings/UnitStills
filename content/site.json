@@ -301,5 +301,37 @@
         "network": "FOX"
       }
     ]
+  },
+  "campaign": {
+    "title": "Key Art & Social",
+    "intro": "Stills from set, built into the networks' key art and social campaigns.",
+    "folder": "campaign",
+    "images": [
+      {
+        "file": "alienist-key-art-1.jpg",
+        "caption": "The Alienist · TNT",
+        "alt": "The Alienist character art: Sara Howard with the line \"Do you honestly believe I'm doing this to advance myself?\""
+      },
+      {
+        "file": "alienist-key-art-2.jpg",
+        "caption": "The Alienist · TNT",
+        "alt": "The Alienist character art: Sara Howard with the line \"I will not be bullied.\""
+      },
+      {
+        "file": "all-american-social-1.jpg",
+        "caption": "All American · The CW",
+        "alt": "All American social graphic: Spencer pulling on a Crenshaw beanie under the word TOMORROW"
+      },
+      {
+        "file": "all-american-social-2.jpg",
+        "caption": "All American · The CW",
+        "alt": "All American social graphic: Spencer in a red football jersey and helmet"
+      },
+      {
+        "file": "all-american-social-3.jpg",
+        "caption": "All American · The CW",
+        "alt": "All American social graphic: three cast portraits split by red diagonal bands"
+      }
+    ]
   }
 }

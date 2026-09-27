@@ -283,6 +283,16 @@ def build():
                 f'<p class="note">{esc(mw["note"])}</p>'
                 f'<ul class="cards small">{"".join(small)}</ul></div>')
 
+    cp = site.get("campaign")
+    campaign = ""
+    if cp and cp.get("images"):
+        tiles = "".join(tile(render_image(cp["folder"], i["file"]), "campaign",
+                             i.get("alt") or i.get("caption", ""), i.get("caption", ""))
+                        for i in cp["images"])
+        intro = f'<p class="note">{esc(cp["intro"])}</p>' if cp.get("intro") else ""
+        campaign = (f'<div class="campaign"><h3 class="label">{esc(cp["title"])}</h3>{intro}'
+                    f'<div class="rows">{tiles}</div></div>')
+
     bts = site["bts"]
     bts_tiles = "".join(tile(render_image(i["folder"], i["file"]), "bts", i["caption"], i["caption"])
                         for i in bts["images"])
@@ -317,6 +327,7 @@ def build():
         "CREDITS_STRIP": strip,
         "WORK_INTRO": esc(site["work_intro"]),
         "CARDS": "".join(cards),
+        "CAMPAIGN": campaign,
         "MORE_WORK": more,
         "BTS_INTRO": esc(bts["intro"]),
         "BTS_TILES": bts_tiles,
