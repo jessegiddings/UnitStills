@@ -12,6 +12,11 @@
       "network": "TNT",
       "years": "2018–2022",
       "intro": "BTS, cast stand-ups and social content captured on set for TNT, 2018–2022."
+    },
+    "Miracle Workers": {
+      "network": "TBS",
+      "years": "2019–2021",
+      "intro": "On-set social capture for TBS, from Dark Ages in Prague (2019) to Oregon Trail (2021)."
     }
   },
   "clips": [
@@ -74,6 +79,18 @@
       "format": "4:5",
       "thumbnail": "clips/good-behavior-01.jpg",
       "credit": "TNT social, Good Behavior, Season 1 (2016). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+    },
+    {
+      "production": "Miracle Workers",
+      "network": "TBS",
+      "season": "Season 3 (Oregon Trail)",
+      "year": "2021",
+      "posted": "2021-08-09",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/miracleworkerstbs/reel/CSXfdZdHzE8/",
+      "format": "4:5",
+      "thumbnail": "clips/miracle-workers-01.jpg",
+      "credit": "TBS social, Miracle Workers: Oregon Trail (2021). Includes on-set BTS footage shot by Jesse Giddings. Edit by TBS."
     }
   ]
 }
