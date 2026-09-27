@@ -63,7 +63,6 @@
     <h2>BTS &amp; Social</h2>
     <p>{{BTS_INTRO}}</p>
   </div>
-  {{BTS_EMBEDS}}
   <div class="rows">{{BTS_TILES}}</div>
   <div class="recent">
     <h3 class="label">Recent social and BTS work</h3>
@@ -119,11 +118,14 @@
 <div class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
   <button class="lb-close" aria-label="Close">×</button>
   <button class="lb-prev" aria-label="Previous image">‹</button>
-  <figure><img alt=""><figcaption></figcaption></figure>
+  <figure>
+    <img alt="">
+    <div class="lb-embed" hidden></div>
+    <figcaption><span class="lb-caption"></span><span class="lb-credit"></span><a class="lb-source" target="_blank" rel="noopener" hidden></a></figcaption>
+  </figure>
   <button class="lb-next" aria-label="Next image">›</button>
 </div>
 
 <script src="site.js" defer></script>
-{{IG_SCRIPT}}
 </body>
 </html>

@@ -113,6 +113,16 @@ def card(folder, files, title, sub, alt, captions=None, alts=None, cover_class="
     return f'<li>{"".join(links)}</li>'
 
 
+def stills_link(folder, files, title, sub, alt):
+    """A "View N stills" link that opens the production's photos in the lightbox."""
+    links = []
+    for i, f in enumerate(files):
+        attrs = lightbox_attrs(render_image(folder, f), folder, alt, join(title, sub))
+        links.append(f'<a class="stills-link" {attrs}>View {len(files)} stills</a>' if i == 0
+                     else f'<a hidden {attrs}></a>')
+    return "".join(links)
+
+
 def tile(meta, group, alt, caption=""):
     """A tile in a justified row; its flex share follows its aspect ratio."""
     ratio = meta["w"] / meta["h"]
@@ -122,19 +132,94 @@ def tile(meta, group, alt, caption=""):
             f'{img_tag(meta, alt, "(max-width: 640px) 100vw, 50vw")}</a>{cap}</figure>')
 
 
-def embed(url):
-    yt = re.search(r"(?:youtu\.be/|v=|/shorts/|/embed/)([\w-]{11})", url)
-    if yt:
-        vid = yt.group(1)
-        vertical = " vertical" if "/shorts/" in url else ""
-        return (f'<div class="embed yt{vertical}"><iframe loading="lazy" '
-                f'src="https://www.youtube-nocookie.com/embed/{vid}" title="YouTube video" '
-                f'allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>')
-    if "instagram.com" in url:
-        return (f'<div class="embed ig"><blockquote class="instagram-media" '
-                f'data-instgrm-permalink="{esc(url)}" data-instgrm-version="14">'
-                f'<a href="{esc(url)}" rel="noopener">View on Instagram</a></blockquote></div>')
-    raise SystemExit(f"Unsupported embed URL: {url}")
+# Video clips. Nothing from the platform loads until a visitor presses play;
+# site.js then swaps in the official embed inside the lightbox.
+
+PLATFORM_NAMES = {"instagram": "Instagram", "youtube": "YouTube", "facebook": "Facebook", "x": "X"}
+FORMATS = {"9:16": "9 / 16", "4:5": "4 / 5", "1:1": "1 / 1", "16:9": "16 / 9"}
+
+
+def clip_source(url, platform=None):
+    """Return (platform, canonical URL, embed id, default format) for a clip URL."""
+    url = url.strip()
+    host = re.sub(r"^www\.|^m\.", "", re.match(r"https?://([^/]+)", url).group(1).lower())
+    platform = platform or {
+        "instagram.com": "instagram", "youtube.com": "youtube", "youtu.be": "youtube",
+        "facebook.com": "facebook", "fb.watch": "facebook", "x.com": "x", "twitter.com": "x",
+    }.get(host)
+    if platform == "instagram":
+        # Profile-style links (/user/reel/CODE/) and tracking params confuse embed.js.
+        m = re.search(r"/(p|reel|reels|tv)/([\w-]+)", url)
+        if not m:
+            raise SystemExit(f"Can't read Instagram post code from {url}")
+        kind = "reel" if m.group(1) in ("reel", "reels") else m.group(1)
+        return platform, f"https://www.instagram.com/{kind}/{m.group(2)}/", m.group(2), \
+            "9:16" if kind in ("reel", "tv") else "4:5"
+    if platform == "youtube":
+        m = re.search(r"(?:youtu\.be/|v=|/shorts/|/embed/|/live/)([\w-]{11})", url)
+        if not m:
+            raise SystemExit(f"Can't read YouTube video id from {url}")
+        return platform, url, m.group(1), "9:16" if "/shorts/" in url else "16:9"
+    if platform in ("facebook", "x"):
+        return platform, url.split("?")[0] if platform == "x" else url, "", \
+            "9:16" if "/reel" in url else "16:9"
+    raise SystemExit(f"Unsupported clip platform for {url}")
+
+
+def load_clips():
+    path = ROOT / "content" / "clips.json"
+    if not path.exists():
+        return {}, {}
+    data = json.loads(path.read_text())
+    by_production = {}
+    for c in data.get("clips", []):
+        platform, url, embed_id, fmt = clip_source(c["url"], c.get("platform"))
+        c = {**c, "platform": platform, "url": url, "embed_id": embed_id,
+             "format": c.get("format") or fmt}
+        by_production.setdefault(c["production"], []).append(c)
+
+    def season_no(c):
+        m = re.search(r"\d+", c.get("season", ""))
+        return int(m.group()) if m else 0
+
+    for clips in by_production.values():
+        clips.sort(key=lambda c: (c.get("posted", ""), c.get("year", ""), season_no(c)), reverse=True)
+    return by_production, data.get("productions", {})
+
+
+def clip_tile(c, group):
+    name = PLATFORM_NAMES[c["platform"]]
+    label_bits = [c.get("network"), "social clip for", c["production"]]
+    label = "Play " + " ".join(b for b in label_bits if b) + (f', {c["season"]}' if c.get("season") else "")
+    thumb_path = PHOTOS / c.get("thumbnail", "")
+    if c.get("thumbnail") and thumb_path.is_file():
+        meta = render_image(thumb_path.parent.relative_to(PHOTOS).as_posix(), thumb_path.name)
+        thumb = img_tag(meta, "", "(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw")
+    else:
+        if c.get("thumbnail"):
+            print(f"  note: no thumbnail yet at photos/{c['thumbnail']}; showing a placeholder")
+        thumb = (f'<span class="clip-ph" aria-hidden="true"><span>{esc(c["production"])}</span>'
+                 f'<span>{esc(join(c.get("season"), c.get("year")))}</span></span>')
+    caption = join(c["production"], c.get("season"), c.get("year"))
+    return (
+        f'<li class="clip" style="--ar: {FORMATS.get(c["format"], "9 / 16")}">'
+        f'<button type="button" class="clip-play" aria-label="{esc(label)}" '
+        f'data-group="{esc(group)}" data-platform="{c["platform"]}" data-platform-name="{name}" '
+        f'data-url="{esc(c["url"])}" data-embed-id="{esc(c["embed_id"])}" '
+        f'data-format="{esc(c["format"])}" data-caption="{esc(caption)}" data-credit="{esc(c.get("credit", ""))}">'
+        f'{thumb}<span class="play" aria-hidden="true"></span>'
+        f'<span class="clip-platform" aria-hidden="true">{name}</span></button>'
+        f'<p class="clip-credit">{esc(c.get("credit", ""))}</p></li>')
+
+
+def clip_card(title, sub, intro, clips, photos=""):
+    """A full-width production card with its clip grid (and stills, if any)."""
+    group = "clips-" + re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+    tiles = "".join(clip_tile(c, group) for c in clips)
+    intro = f'<p class="feature-intro">{esc(intro)}</p>' if intro else ""
+    return (f'<li class="feature"><header><h3>{esc(title)}</h3>'
+            f'<p class="card-sub">{esc(sub)}</p></header>{intro}{photos}'
+            f'<ul class="clip-grid">{tiles}</ul></li>')
 
 
 def build():
@@ -152,13 +237,27 @@ def build():
 
     strip = "".join(f"<li>{esc(n)}</li>" for n in site["credits_strip"])
 
+    clips_by_production, clip_meta = load_clips()
     cards = []
+    listed = set()
     for p in site["productions"]:
-        files = folder_files(p["folder"], p.get("order", []))
+        listed.add(p["title"])
+        files = folder_files(p["folder"], p.get("order", [])) if p.get("folder") else []
         title = p["title"] + (f" ({p['detail']})" if p.get("detail") else "")
         sub = join(p.get("network"), p.get("year"), p.get("location"))
-        cards.append(card(p["folder"], files, p["title"], sub,
-                          join(title, p.get("network"), p.get("year")), p.get("captions")))
+        alt = join(title, p.get("network"), p.get("year"))
+        clips = clips_by_production.get(p["title"])
+        if clips:
+            intro = p.get("clips_intro") or clip_meta.get(p["title"], {}).get("intro", "")
+            cards.append(clip_card(p["title"], sub, intro, clips,
+                                   stills_link(p["folder"], files, title, sub, alt) if files else ""))
+        elif files:
+            cards.append(card(p["folder"], files, p["title"], sub, alt, p.get("captions")))
+    for name, clips in clips_by_production.items():
+        if name not in listed:  # clip-only production that isn't in site.json yet
+            m = clip_meta.get(name, {})
+            cards.append(clip_card(name, join(m.get("network") or clips[0].get("network"), m.get("years")),
+                                   m.get("intro", ""), clips))
     pk = site["portraits"]
     cards.append(card(pk["folder"], folder_files(pk["folder"], pk.get("order", [])),
                       pk["title"], "Portrait sessions and key art", pk["title"],
@@ -180,10 +279,6 @@ def build():
     bts = site["bts"]
     bts_tiles = "".join(tile(render_image(i["folder"], i["file"]), "bts", i["caption"], i["caption"])
                         for i in bts["images"])
-    embeds = [embed(u) for u in bts.get("embeds", [])]
-    bts_embeds = f'<div class="embeds">{"".join(embeds)}</div>' if embeds else ""
-    ig_script = ('<script async src="https://www.instagram.com/embed.js"></script>'
-                 if any("instagram.com" in u for u in bts.get("embeds", [])) else "")
     bts_recent = "".join(f"<li>{esc(r)}</li>" for r in bts["recent"])
 
     nt = site["network_tests"]
@@ -221,10 +316,8 @@ def build():
         "CARDS": "".join(cards),
         "MORE_WORK": more,
         "BTS_INTRO": esc(bts["intro"]),
-        "BTS_EMBEDS": bts_embeds,
         "BTS_TILES": bts_tiles,
         "BTS_RECENT": bts_recent,
-        "IG_SCRIPT": ig_script,
         "NT_TEXT": esc(nt["text"]),
         "NT_GALLERY": nt_gallery,
         "ASSIGNMENT_INTRO": esc(a["intro"]),

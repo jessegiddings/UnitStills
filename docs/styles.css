@@ -121,12 +121,44 @@ ul { list-style: none; margin: 0; padding: 0; }
 .tile img { width: 100%; }
 .tile figcaption { font-size: 12px; color: var(--muted); padding-top: 6px; }
 
-/* BTS embeds */
-.embeds { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 12px; }
-.embed.yt { position: relative; aspect-ratio: 16 / 9; background: var(--bg-raised); }
-.embed.yt.vertical { aspect-ratio: 9 / 16; }
-.embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.embed .instagram-media { margin: 0 !important; min-width: 0 !important; width: 100% !important; }
+/* Production cards with video clips span the full Work grid */
+.cards { grid-auto-flow: dense; }
+.feature { grid-column: 1 / -1; padding: 20px 0 8px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 12px 0; }
+.feature header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+.feature h3 { font: 500 30px/1.1 var(--serif); }
+.feature-intro { color: var(--soft); margin: 10px 0 20px; max-width: 60ch; }
+.stills-link { display: inline-block; margin: 0 0 20px; font: 500 11px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--soft); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.stills-link:hover { color: var(--text); border-color: var(--text); }
+
+/* Clip tiles: a local thumbnail and a play button; the platform loads on click */
+.clip-grid { display: grid; grid-template-columns: 1fr; gap: 20px 12px; }
+/* Cap tall formats so a 9:16 tile never outgrows the screen; wide ones fill the column. */
+.clip { margin: 0; width: min(100%, calc(min(620px, 72svh) * var(--ar, 9 / 16))); }
+.clip-play {
+  position: relative; display: block; width: 100%; aspect-ratio: var(--ar, 9 / 16);
+  padding: 0; border: 0; overflow: hidden; background: var(--bg-raised); color: var(--text); cursor: pointer;
+}
+.clip-play img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease, opacity .3s; }
+.clip-ph {
+  position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px;
+  padding: 18px; text-align: left;
+  background: radial-gradient(120% 80% at 50% 30%, #222 0%, var(--bg-raised) 60%, #101010 100%);
+}
+.clip-ph span:first-child { font: 500 24px/1.1 var(--serif); }
+.clip-ph span:last-child { font: 500 10.5px/1.3 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.play {
+  position: absolute; top: 50%; left: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px;
+  border: 1px solid rgba(237,236,232,.7); border-radius: 50%; background: rgba(13,13,13,.35);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); transition: background .25s, transform .25s;
+}
+.play::after {
+  content: ""; position: absolute; top: 50%; left: 50%; margin: -8px 0 0 -4px;
+  border-style: solid; border-width: 8px 0 8px 13px; border-color: transparent transparent transparent var(--text);
+}
+.clip-platform { position: absolute; top: 12px; left: 12px; font: 500 10px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--soft); text-shadow: 0 1px 6px rgba(0,0,0,.6); }
+.clip-play:hover .play, .clip-play:focus-visible .play { background: rgba(13,13,13,.6); transform: scale(1.06); }
+.clip-play:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+.clip-credit { margin: 8px 0 0; font-size: 12px; line-height: 1.5; font-style: italic; color: var(--muted); }
 
 .recent { margin-top: 40px; max-width: 720px; }
 .recent h3 { margin-bottom: 8px; }
@@ -161,7 +193,21 @@ ul { list-style: none; margin: 0; padding: 0; }
 .lightbox[hidden] { display: none; }
 .lightbox figure { margin: 0; width: 100%; }
 .lightbox img { max-height: calc(100svh - 120px); width: auto; max-width: 100%; margin: 0 auto; user-select: none; -webkit-user-drag: none; }
-.lightbox figcaption { text-align: center; color: var(--muted); font-size: 12px; letter-spacing: .08em; padding: 14px var(--gutter) 0; }
+.lightbox figcaption { display: grid; justify-items: center; gap: 4px; text-align: center; color: var(--muted); font-size: 12px; letter-spacing: .08em; padding: 14px var(--gutter) 0; }
+.lb-credit { font-style: italic; letter-spacing: 0; max-width: 60ch; }
+.lb-credit:empty { display: none; }
+.lb-source { color: var(--soft); letter-spacing: .12em; text-transform: uppercase; font-size: 10.5px; text-decoration: none; margin-top: 2px; }
+.lb-source:hover { color: var(--text); }
+.lb-embed {
+  --h: calc(100svh - 190px);
+  width: min(100% - 2 * var(--gutter), 480px);
+  max-height: var(--h); margin: 0 auto; overflow-y: auto; overscroll-behavior: contain;
+}
+.lb-embed[hidden] { display: none; }
+.lb-embed[data-platform="youtube"] { position: relative; aspect-ratio: var(--ar); width: min(100% - 2 * var(--gutter), var(--h) * var(--ar)); overflow: hidden; }
+.lb-embed[data-platform="youtube"] iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.lb-embed .instagram-media, .lb-embed .twitter-tweet { margin: 0 auto !important; min-width: 0 !important; max-width: 100% !important; }
+.lb-fallback { display: grid; justify-items: center; gap: 16px; margin: 0; padding: 48px 16px; color: var(--soft); text-align: center; }
 .lightbox button {
   position: absolute; background: none; border: 0; color: var(--text); cursor: pointer;
   font: 300 40px/1 var(--sans); padding: 14px 18px; opacity: .75;
@@ -187,7 +233,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .nav nav { flex: 0 1 auto; gap: 28px; }
   .cards { grid-template-columns: 1fr 1fr; }
   .cards.small { grid-template-columns: repeat(3, 1fr); }
-  .embeds { grid-template-columns: repeat(2, 1fr); }
+  .clip-grid { grid-template-columns: repeat(2, 1fr); }
   .contact .actions { flex-direction: row; max-width: none; align-items: center; }
   .credits { columns: 2; column-gap: 48px; }
   .credits section { break-inside: avoid; }
@@ -204,7 +250,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .section-head .about { font-size: 30px; margin: 0; }
   .cards { grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .cards.small { grid-template-columns: repeat(3, 1fr); }
-  .embeds { grid-template-columns: repeat(3, 1fr); }
+  .clip-grid { grid-template-columns: repeat(3, 1fr); gap: 24px 14px; }
   .credits { columns: 3; }
   .contact h2 { font-size: 72px; }
   .lb-prev, .lb-next { top: 50%; bottom: auto; transform: translateY(-50%); }

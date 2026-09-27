@@ -1,0 +1,32 @@
+{
+  "_help": [
+    "Video clips shown on production cards. Videos stay on the original platform; the site only embeds them after a click.",
+    "production: must match a production title in site.json. If it doesn't, a clip-only card is added at the end of Work.",
+    "platform: instagram, youtube, facebook or x. Detected from the URL if left out.",
+    "thumbnail: a still you supply, relative to photos/ (e.g. clips/animal-kingdom-01.jpg). Never pulled from the platform. If the file is missing, a plain placeholder tile is shown.",
+    "format: 9:16, 4:5, 1:1 or 16:9. Defaults to 9:16 for reels/shorts, 4:5 for Instagram posts, 16:9 for everything else.",
+    "Clips are shown newest first (by posted date, then year, then season)."
+  ],
+
+  "productions": {
+    "Animal Kingdom": {
+      "network": "TNT",
+      "years": "2018–2021",
+      "intro": "BTS, cast stand-ups and social content captured on set for TNT, 2018–2021."
+    }
+  },
+
+  "clips": [
+    {
+      "production": "Animal Kingdom",
+      "network": "TNT",
+      "season": "Season 6",
+      "year": "2021",
+      "posted": "2022-08-29",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/animalkingdomtnt/reel/Ch2tfqlDt4u/",
+      "thumbnail": "clips/animal-kingdom-01.jpg",
+      "credit": "TNT social, Animal Kingdom (2021). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+    }
+  ]
+}

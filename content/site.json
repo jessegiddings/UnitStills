@@ -53,6 +53,11 @@
       "location": "Los Angeles"
     },
     {
+      "title": "Animal Kingdom",
+      "network": "TNT",
+      "year": "2018–2021"
+    },
+    {
       "folder": "last-man-on-earth-s4-fox",
       "title": "The Last Man on Earth",
       "detail": "Season 4",
@@ -119,9 +124,7 @@
       "Animal Kingdom · TNT · BTS and EPK capture",
       "Snowpiercer · TNT · BTS photography and social content",
       "I Am the Night · TNT · BTS for social"
-    ],
-    "embeds": [],
-    "embeds_help": "Add Instagram post/reel URLs or YouTube URLs here, e.g. https://www.instagram.com/p/XXXX/ or https://www.youtube.com/watch?v=XXXX"
+    ]
   },
   "network_tests": {
     "text": "Before a pilot shoots, networks need to see the cast in hair, makeup and wardrobe. I bring a full lighting setup to the stage or backlot, shoot the entire cast, and deliver edited, network-ready images fast. Recent: Single Parents (ABC).",
