@@ -233,7 +233,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .nav nav { flex: 0 1 auto; gap: 28px; }
   .cards { grid-template-columns: 1fr 1fr; }
   .cards.small { grid-template-columns: repeat(3, 1fr); }
-  .clip-grid { grid-template-columns: repeat(2, 1fr); }
+  .clip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact .actions { flex-direction: row; max-width: none; align-items: center; }
   .credits { columns: 2; column-gap: 48px; }
   .credits section { break-inside: avoid; }
@@ -250,7 +250,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .section-head .about { font-size: 30px; margin: 0; }
   .cards { grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .cards.small { grid-template-columns: repeat(3, 1fr); }
-  .clip-grid { grid-template-columns: repeat(3, 1fr); gap: 24px 14px; }
+  .clip-grid { grid-template-columns: repeat(2, minmax(0, 460px)); gap: 28px 20px; }
   .credits { columns: 3; }
   .contact h2 { font-size: 72px; }
   .lb-prev, .lb-next { top: 50%; bottom: auto; transform: translateY(-50%); }

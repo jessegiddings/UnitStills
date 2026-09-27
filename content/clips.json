@@ -7,26 +7,61 @@
     "format: 9:16, 4:5, 1:1 or 16:9. Defaults to 9:16 for reels/shorts, 4:5 for Instagram posts, 16:9 for everything else.",
     "Clips are shown newest first (by posted date, then year, then season)."
   ],
-
   "productions": {
     "Animal Kingdom": {
       "network": "TNT",
-      "years": "2018–2021",
-      "intro": "BTS, cast stand-ups and social content captured on set for TNT, 2018–2021."
+      "years": "2018–2022",
+      "intro": "BTS, cast stand-ups and social content captured on set for TNT, 2018–2022."
     }
   },
-
   "clips": [
     {
       "production": "Animal Kingdom",
       "network": "TNT",
       "season": "Season 6",
-      "year": "2021",
+      "year": "2022",
       "posted": "2022-08-29",
       "platform": "instagram",
-      "url": "https://www.instagram.com/animalkingdomtnt/reel/Ch2tfqlDt4u/",
+      "url": "https://www.instagram.com/p/Ch10ghcB3fn/",
+      "format": "4:5",
       "thumbnail": "clips/animal-kingdom-01.jpg",
-      "credit": "TNT social, Animal Kingdom (2021). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+      "credit": "TNT social, Animal Kingdom, final season (2022). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+    },
+    {
+      "production": "Animal Kingdom",
+      "network": "TNT",
+      "season": "Season 3",
+      "year": "2018",
+      "posted": "2018-08-23",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/p/Bm1UgTRnRwe/",
+      "format": "4:5",
+      "thumbnail": "clips/animal-kingdom-02.jpg",
+      "credit": "TNT social, Animal Kingdom, Season 3 (2018). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+    },
+    {
+      "production": "Animal Kingdom",
+      "network": "TNT",
+      "season": "Season 3",
+      "year": "2018",
+      "posted": "2018-08-20",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/p/Bmtje3PnWTK/",
+      "format": "4:5",
+      "thumbnail": "clips/animal-kingdom-03.jpg",
+      "credit": "TNT social, Animal Kingdom, Season 3 (2018). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+    },
+    {
+      "production": "Animal Kingdom",
+      "network": "TNT",
+      "season": "Season 3",
+      "year": "2018",
+      "posted": "2018-08-07",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/p/BmMaz7in1ml/",
+      "format": "4:5",
+      "thumbnail": "clips/animal-kingdom-04.jpg",
+      "credit": "TNT social, Animal Kingdom, Season 3 (2018). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
     }
   ]
 }
