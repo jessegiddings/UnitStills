@@ -6,8 +6,9 @@
   "instagram": "jessegiddings",
   "hero": {
     "folder": "the-alienist-tnt",
-    "file": "TNT_TheAlienist_B2-090-2.jpg",
-    "caption": "The Alienist · TNT · Budapest"
+    "file": "04.28.17_EP103_Scene_40_CamA-602.jpg",
+    "caption": "The Alienist · TNT · Budapest",
+    "focus": "48% 40%"
   },
   "credits_strip": [
     "FOX",
@@ -29,6 +30,7 @@
       "network": "TNT",
       "location": "Budapest",
       "order": [
+        "04.28.17_EP103_Scene_40_CamA-602.jpg",
         "TNT_TheAlienist_B2-090-2.jpg"
       ]
     },

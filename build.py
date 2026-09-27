@@ -238,6 +238,8 @@ def build():
     hero = site["hero"]
     hero_meta = render_image(hero["folder"], hero["file"])
     hero_img = img_tag(hero_meta, hero["caption"], "100vw", eager=True)
+    if hero.get("focus"):  # which part of the frame stays in view when the hero is cropped
+        hero_img = hero_img.replace("<img ", f'<img style="--focus: {esc(hero["focus"])}" ', 1)
 
     strip = "".join(f"<li>{esc(n)}</li>" for n in site["credits_strip"])
 
