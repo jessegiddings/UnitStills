@@ -186,19 +186,15 @@ def load_clips():
              "format": c.get("format") or fmt}
         by_production.setdefault(c["production"], []).append(c)
 
-    def season_no(c):
-        m = re.search(r"\d+", c.get("season", ""))
-        return int(m.group()) if m else 0
-
     for clips in by_production.values():
-        clips.sort(key=lambda c: (c.get("posted", ""), c.get("year", ""), season_no(c)), reverse=True)
+        clips.sort(key=lambda c: c.get("posted", ""), reverse=True)
     return by_production, data.get("productions", {})
 
 
 def clip_tile(c, group):
     name = PLATFORM_NAMES[c["platform"]]
     label_bits = [c.get("network"), "social clip for", c["production"]]
-    label = "Play " + " ".join(b for b in label_bits if b) + (f', {c["season"]}' if c.get("season") else "")
+    label = "Play " + " ".join(b for b in label_bits if b)
     thumb_path = PHOTOS / c.get("thumbnail", "")
     if c.get("thumbnail") and thumb_path.is_file():
         meta = render_image(thumb_path.parent.relative_to(PHOTOS).as_posix(), thumb_path.name)
@@ -207,8 +203,8 @@ def clip_tile(c, group):
         if c.get("thumbnail"):
             print(f"  note: no thumbnail yet at photos/{c['thumbnail']}; showing a placeholder")
         thumb = (f'<span class="clip-ph" aria-hidden="true"><span>{esc(c["production"])}</span>'
-                 f'<span>{esc(join(c.get("season"), c.get("year")))}</span></span>')
-    caption = join(c["production"], c.get("season"), c.get("year"))
+                 f'<span>{esc(c.get("network", ""))}</span></span>')
+    caption = join(c["production"], c.get("network"))
     return (
         f'<li class="clip" style="--ar: {FORMATS.get(c["format"], "9 / 16")}">'
         f'<button type="button" class="clip-play" aria-label="{esc(label)}" '
@@ -252,8 +248,8 @@ def build():
         listed.add(p["title"])
         files = folder_files(p["folder"], p.get("order", [])) if p.get("folder") else []
         title = p["title"] + (f" ({p['detail']})" if p.get("detail") else "")
-        sub = join(p.get("network"), p.get("year"), p.get("location"))
-        alt = join(title, p.get("network"), p.get("year"))
+        sub = join(p.get("network"), p.get("location"))
+        alt = join(title, p.get("network"))
         clips = clips_by_production.get(p["title"])
         if clips:
             intro = p.get("clips_intro") or clip_meta.get(p["title"], {}).get("intro", "")
@@ -265,7 +261,7 @@ def build():
     for name, clips in clips_by_production.items():
         if name not in listed:  # clip-only production that isn't in site.json yet
             m = clip_meta.get(name, {})
-            cards.append(clip_card(name, join(m.get("network") or clips[0].get("network"), m.get("years")),
+            cards.append(clip_card(name, join(m.get("network") or clips[0].get("network")),
                                    m.get("intro", ""), clips))
     pk = site["portraits"]
     cards.append(card(pk["folder"], folder_files(pk["folder"], pk.get("order", [])),
@@ -278,9 +274,9 @@ def build():
         small = []
         for p in mw["productions"]:
             files = folder_files(p["folder"], p.get("order", []))[:p.get("limit")]
-            sub = join(p.get("network"), p.get("year"))
+            sub = p.get("network", "")
             small.append(card(p["folder"], files, p["title"], sub,
-                              join(p["title"], p.get("network"), p.get("year"))))
+                              join(p["title"], p.get("network"))))
         more = (f'<div class="more-work"><h3 class="label">{esc(mw["title"])}</h3>'
                 f'<p class="note">{esc(mw["note"])}</p>'
                 f'<ul class="cards small">{"".join(small)}</ul></div>')
@@ -305,11 +301,7 @@ def build():
 
     credits = []
     for group in site["credits"]:
-        rows = "".join(
-            f'<li><span class="show">{esc(s)}</span>'
-            f'<span class="meta">{meta_line(season, year)}</span>'
-            f'<span class="role">{esc(role)}</span></li>'
-            for s, season, year, role in group["shows"])
+        rows = "".join(f'<li>{esc(show)}</li>' for show in group["shows"])
         credits.append(f'<section><h3 class="label">{esc(group["network"])}</h3><ul>{rows}</ul></section>')
 
     tpl = (ROOT / "templates" / "index.html").read_text()

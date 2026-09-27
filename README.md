@@ -17,18 +17,16 @@ One-page portfolio for unit stills, BTS and social work in film and television.
 
 - **Swap in full-res originals:** replace the files in `photos/<folder>/`, then rebuild.
 - **Add a production:** make a new `photos/<folder>/`, add an entry to `productions` in `content/site.json`, then rebuild. The first image (or the first one listed in `order`) is the cover.
-- **Add a video clip:** add an entry to `clips` in `content/clips.json` and drop its thumbnail in `photos/clips/`, then rebuild. Example:
+- **Add a video clip:** add an entry to `clips` in `content/clips.json` and drop its thumbnail in `photos/clips/`, then rebuild. `posted` (the post date) only sorts clips newest first; the site never shows dates. Example:
 
   ```json
   {
     "production": "Snowpiercer",
     "network": "TNT",
-    "season": "Season 4",
-    "year": "2022",
     "posted": "2022-07-01",
     "url": "https://www.instagram.com/reel/XXXXXXXXXXX/",
     "thumbnail": "clips/snowpiercer-01.jpg",
-    "credit": "TNT social, Snowpiercer (2022). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+    "credit": "TNT social, Snowpiercer. Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
   }
   ```
 

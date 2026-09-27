@@ -27,7 +27,6 @@
       "folder": "the-alienist-tnt",
       "title": "The Alienist",
       "network": "TNT",
-      "year": "2017",
       "location": "Budapest",
       "order": [
         "TNT_TheAlienist_B2-090-2.jpg"
@@ -36,9 +35,7 @@
     {
       "folder": "good-behavior-s1-tnt",
       "title": "Good Behavior",
-      "detail": "Season 1",
       "network": "TNT",
-      "year": "2016",
       "location": "",
       "order": [
         "TNTday1-3326-3.jpg"
@@ -47,27 +44,21 @@
     {
       "folder": "new-girl-s7-fox",
       "title": "New Girl",
-      "detail": "Season 7",
       "network": "FOX",
-      "year": "2017",
       "location": "Los Angeles"
     },
     {
       "title": "Animal Kingdom",
-      "network": "TNT",
-      "year": "2018–2022"
+      "network": "TNT"
     },
     {
       "title": "Miracle Workers",
-      "network": "TBS",
-      "year": "2019–2021"
+      "network": "TBS"
     },
     {
       "folder": "last-man-on-earth-s4-fox",
       "title": "The Last Man on Earth",
-      "detail": "Season 4",
       "network": "FOX",
-      "year": "2017–18",
       "location": "Los Angeles",
       "order": [
         "LMOE-S4_418-SC28pt_012.jpg"
@@ -76,31 +67,25 @@
     {
       "folder": "jane-the-virgin-s4-cw",
       "title": "Jane the Virgin",
-      "detail": "Episode 416",
       "network": "The CW",
-      "year": "2018",
       "location": "Los Angeles"
     },
     {
       "folder": "monsters-of-god-tnt",
       "title": "Monsters of God",
-      "detail": "Pilot",
       "network": "TNT",
-      "year": "2016",
       "location": ""
     },
     {
       "folder": "dumpster-dive",
       "title": "Dumpster Dive",
       "network": "",
-      "year": "",
       "location": ""
     },
     {
       "folder": "candy-crush-tbs",
       "title": "Candy Crush",
       "network": "TBS",
-      "year": "2017",
       "location": ""
     }
   ],
@@ -210,226 +195,75 @@
     {
       "network": "FOX",
       "shows": [
-        [
-          "New Girl",
-          "S7",
-          "2017",
-          "Unit stills"
-        ],
-        [
-          "The Last Man on Earth",
-          "S4",
-          "2017–18",
-          "Unit stills"
-        ],
-        [
-          "9-1-1",
-          "S1–S3",
-          "2018–19",
-          "Unit stills"
-        ],
-        [
-          "The Orville",
-          "S2",
-          "2018",
-          "Unit stills"
-        ],
-        [
-          "Beat Shazam",
-          "S3",
-          "2019",
-          "Unit stills"
-        ],
-        [
-          "Ghosted",
-          "S1",
-          "2018",
-          "Unit stills"
-        ],
-        [
-          "Mixtape",
-          "Pilot",
-          "2018",
-          "Unit stills"
-        ]
+        "New Girl",
+        "The Last Man on Earth",
+        "9-1-1",
+        "The Orville",
+        "Beat Shazam",
+        "Ghosted",
+        "Mixtape"
       ]
     },
     {
       "network": "The CW / Warner Bros.",
       "shows": [
-        [
-          "All American",
-          "Pilot, S1",
-          "2018",
-          "Unit stills, BTS"
-        ],
-        [
-          "Jane the Virgin",
-          "S4, S5",
-          "2018",
-          "Unit stills, BTS"
-        ]
+        "All American",
+        "Jane the Virgin"
       ]
     },
     {
       "network": "ABC",
       "shows": [
-        [
-          "Single Parents",
-          "Pilot",
-          "2018",
-          "Network test photography"
-        ],
-        [
-          "Untitled Hannah Simone pilot",
-          "Pilot",
-          "2019",
-          "Unit stills"
-        ]
+        "Single Parents",
+        "Untitled Hannah Simone pilot"
       ]
     },
     {
       "network": "CBS",
       "shows": [
-        [
-          "The Price Is Right",
-          "",
-          "2018",
-          "Stills"
-        ]
+        "The Price Is Right"
       ]
     },
     {
       "network": "NBC",
       "shows": [
-        [
-          "A.P. Bio",
-          "S2",
-          "2018",
-          "Unit stills"
-        ]
+        "A.P. Bio"
       ]
     },
     {
       "network": "TNT",
       "shows": [
-        [
-          "Good Behavior",
-          "S1",
-          "2016",
-          "Stills and video"
-        ],
-        [
-          "Monsters of God",
-          "Pilot",
-          "2016",
-          "Social photography"
-        ],
-        [
-          "The Alienist",
-          "S1",
-          "2017",
-          "Social photography, Budapest"
-        ],
-        [
-          "Animal Kingdom",
-          "S3, S6",
-          "2018, 2021",
-          "Social, BTS and EPK capture"
-        ],
-        [
-          "I Am the Night",
-          "",
-          "2018–19",
-          "BTS for social"
-        ],
-        [
-          "Snowpiercer",
-          "S1, S4",
-          "2018, 2022",
-          "BTS photography, social content"
-        ]
+        "Good Behavior",
+        "Monsters of God",
+        "The Alienist",
+        "Animal Kingdom",
+        "I Am the Night",
+        "Snowpiercer"
       ]
     },
     {
       "network": "TBS",
       "shows": [
-        [
-          "Search Party",
-          "",
-          "2016",
-          "Social stills"
-        ],
-        [
-          "Candy Crush",
-          "",
-          "2017",
-          "Stills"
-        ],
-        [
-          "Guest Book",
-          "S2",
-          "2018",
-          "Stills"
-        ],
-        [
-          "Chad",
-          "Pilot, S2",
-          "2019, 2021",
-          "Stills, marketing shoot"
-        ],
-        [
-          "American Dad 300th table read",
-          "",
-          "2019",
-          "Event stills"
-        ],
-        [
-          "Miracle Workers: Dark Ages",
-          "S2",
-          "2019",
-          "Social coverage"
-        ],
-        [
-          "Miracle Workers: Oregon Trail",
-          "S3",
-          "2021",
-          "On-set social capture, promo shoot"
-        ]
+        "Search Party",
+        "Candy Crush",
+        "Guest Book",
+        "Chad",
+        "American Dad 300th table read",
+        "Miracle Workers"
       ]
     },
     {
       "network": "truTV",
       "shows": [
-        [
-          "At Home with Amy Sedaris",
-          "S3",
-          "2019",
-          "On-set social capture"
-        ],
-        [
-          "Fast Foodies",
-          "",
-          "2021",
-          "Marketing content"
-        ]
+        "At Home with Amy Sedaris",
+        "Fast Foodies"
       ]
     },
     {
       "network": "HBO Max",
       "shows": [
-        [
-          "Full Bloom",
-          "",
-          "2020",
-          "Social producer, marketing capture"
-        ],
-        [
-          "The Event",
-          "",
-          "2020",
-          "BTS and social coverage"
-        ]
+        "Full Bloom",
+        "The Event"
       ]
     }
   ],
@@ -441,7 +275,6 @@
         "folder": "911-fox-lowres",
         "title": "9-1-1",
         "network": "FOX",
-        "year": "2018–19",
         "order": [
           "911-imdb-08.jpg",
           "911-imdb-02.jpg",
@@ -453,7 +286,6 @@
         "folder": "all-american-s1-cw-lowres",
         "title": "All American",
         "network": "The CW",
-        "year": "2018",
         "order": [
           "aa-imdb-16.jpg",
           "aa-imdb-03.jpg",
@@ -464,8 +296,7 @@
       {
         "folder": "orville-s2-fox-lowres",
         "title": "The Orville",
-        "network": "FOX",
-        "year": "2018"
+        "network": "FOX"
       }
     ]
   }

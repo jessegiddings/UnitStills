@@ -166,10 +166,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* Credits */
 .credits section { margin-bottom: 36px; }
 .credits h3 { margin-bottom: 10px; }
-.credits li { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 10px 0; border-top: 1px solid var(--line); }
-.credits .show { font: 500 20px/1.25 var(--serif); }
-.credits .meta { color: var(--muted); font-size: 13px; text-align: right; align-self: center; }
-.credits .role { grid-column: 1 / -1; color: var(--muted); font-size: 13px; }
+.credits li { padding: 9px 0; border-top: 1px solid var(--line); font: 500 20px/1.3 var(--serif); }
 
 .section-head .about { font: 400 24px/1.45 var(--serif); color: var(--text); max-width: 40ch; margin-top: 24px; }
 

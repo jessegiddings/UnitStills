@@ -5,104 +5,88 @@
     "platform: instagram, youtube, facebook or x. Detected from the URL if left out.",
     "thumbnail: a still you supply, relative to photos/ (e.g. clips/animal-kingdom-01.jpg). Never pulled from the platform. If the file is missing, a plain placeholder tile is shown.",
     "format: 9:16, 4:5, 1:1 or 16:9. Defaults to 9:16 for reels/shorts, 4:5 for Instagram posts, 16:9 for everything else.",
-    "Clips are shown newest first (by posted date, then year, then season)."
+    "posted: the post date (YYYY-MM-DD). Only used to sort clips newest first; never shown on the site."
   ],
   "productions": {
     "Animal Kingdom": {
       "network": "TNT",
-      "years": "2018–2022",
-      "intro": "BTS, cast stand-ups and social content captured on set for TNT, 2018–2022."
+      "intro": "BTS, cast stand-ups and social content captured on set for TNT."
     },
     "Miracle Workers": {
       "network": "TBS",
-      "years": "2019–2021",
-      "intro": "On-set social capture for TBS, from Dark Ages in Prague (2019) to Oregon Trail (2021)."
+      "intro": "On-set social capture for TBS, from Dark Ages in Prague to Oregon Trail."
     }
   },
   "clips": [
     {
       "production": "Animal Kingdom",
       "network": "TNT",
-      "season": "Season 6",
-      "year": "2022",
       "posted": "2022-08-29",
       "platform": "instagram",
       "url": "https://www.instagram.com/p/Ch10ghcB3fn/",
       "format": "4:5",
       "thumbnail": "clips/animal-kingdom-01.jpg",
-      "credit": "TNT social, Animal Kingdom, final season (2022). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+      "credit": "TNT social, Animal Kingdom. Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
     },
     {
       "production": "Animal Kingdom",
       "network": "TNT",
-      "season": "Season 3",
-      "year": "2018",
       "posted": "2018-08-23",
       "platform": "instagram",
       "url": "https://www.instagram.com/p/Bm1UgTRnRwe/",
       "format": "4:5",
       "thumbnail": "clips/animal-kingdom-02.jpg",
-      "credit": "TNT social, Animal Kingdom, Season 3 (2018). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+      "credit": "TNT social, Animal Kingdom. Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
     },
     {
       "production": "Animal Kingdom",
       "network": "TNT",
-      "season": "Season 3",
-      "year": "2018",
       "posted": "2018-08-20",
       "platform": "instagram",
       "url": "https://www.instagram.com/p/Bmtje3PnWTK/",
       "format": "4:5",
       "thumbnail": "clips/animal-kingdom-03.jpg",
-      "credit": "TNT social, Animal Kingdom, Season 3 (2018). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+      "credit": "TNT social, Animal Kingdom. Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
     },
     {
       "production": "Animal Kingdom",
       "network": "TNT",
-      "season": "Season 3",
-      "year": "2018",
       "posted": "2018-08-07",
       "platform": "instagram",
       "url": "https://www.instagram.com/p/BmMaz7in1ml/",
       "format": "4:5",
       "thumbnail": "clips/animal-kingdom-04.jpg",
-      "credit": "TNT social, Animal Kingdom, Season 3 (2018). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+      "credit": "TNT social, Animal Kingdom. Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
     },
     {
       "production": "Good Behavior",
       "network": "TNT",
-      "season": "Season 1",
-      "year": "2016",
       "posted": "2016-12-18",
       "platform": "instagram",
       "url": "https://www.instagram.com/p/BOK_HIIgaM3/",
       "format": "16:9",
       "thumbnail": "clips/good-behavior-01.jpg",
-      "credit": "TNT social, Good Behavior, Season 1 (2016). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+      "credit": "TNT social, Good Behavior. Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
     },
     {
       "production": "Good Behavior",
       "network": "TNT",
-      "season": "Season 1",
-      "year": "2016",
       "posted": "2016-08-02",
       "platform": "instagram",
       "url": "https://www.instagram.com/p/BInVP7rheqd/",
       "format": "16:9",
       "thumbnail": "clips/good-behavior-02.jpg",
-      "credit": "TNT social, Good Behavior, Season 1 (2016). Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
+      "credit": "TNT social, Good Behavior. Includes on-set BTS footage shot by Jesse Giddings. Edit by TNT."
     },
     {
       "production": "Miracle Workers",
       "network": "TBS",
-      "season": "Season 3 (Oregon Trail)",
-      "year": "2021",
       "posted": "2021-08-09",
       "platform": "instagram",
       "url": "https://www.instagram.com/miracleworkerstbs/reel/CSXfdZdHzE8/",
       "format": "4:5",
       "thumbnail": "clips/miracle-workers-01.jpg",
-      "credit": "TBS social, Miracle Workers: Oregon Trail (2021). Includes on-set BTS footage shot by Jesse Giddings. Edit by TBS."
+      "credit": "TBS social, Miracle Workers. Includes on-set BTS footage shot by Jesse Giddings. Edit by TBS."
     }
   ]
 }
