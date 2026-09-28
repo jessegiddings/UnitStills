@@ -153,6 +153,18 @@
       ]
     },
     {
+      "folder": "price-is-right-cbs",
+      "title": "The Price Is Right",
+      "network": "CBS",
+      "order": [
+        "pir-drew-audience.jpg",
+        "pir-drew-contestants.jpg",
+        "pir-wife-is-right.jpg",
+        "pir-drew-hearts.jpg",
+        "pir-drew-portrait.jpg"
+      ]
+    },
+    {
       "folder": "candy-crush-tbs",
       "title": "Candy Crush",
       "network": "TBS",
