@@ -140,7 +140,16 @@
       "folder": "dumpster-dive",
       "title": "Seth Rogen Short",
       "network": "",
-      "location": ""
+      "location": "",
+      "order": [
+        "seth-rogen-short-rogen.jpg",
+        "DumpsterDive_A-076.jpg",
+        "seth-rogen-short-franco.jpg",
+        "seth-rogen-short-pena-blue.jpg",
+        "DumpsterDive_A-162.jpg",
+        "DumpsterDive_A-1631.jpg",
+        "seth-rogen-short-bts-setup.jpg"
+      ]
     },
     {
       "folder": "candy-crush-tbs",
