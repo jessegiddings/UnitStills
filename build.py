@@ -297,7 +297,6 @@ def build():
     bts = site["bts"]
     bts_tiles = "".join(tile(render_image(i["folder"], i["file"]), "bts", i["caption"], i["caption"])
                         for i in bts["images"])
-    bts_recent = "".join(f"<li>{esc(r)}</li>" for r in bts["recent"])
 
     nt = site["network_tests"]
     nt_tiles = "".join(tile(render_image(i["folder"], i["file"]), "tests",
@@ -332,7 +331,6 @@ def build():
         "MORE_WORK": more,
         "BTS_INTRO": esc(bts["intro"]),
         "BTS_TILES": bts_tiles,
-        "BTS_RECENT": bts_recent,
         "NT_TEXT": esc(nt["text"]),
         "NT_GALLERY": nt_gallery,
         "ASSIGNMENT_INTRO": esc(a["intro"]),
