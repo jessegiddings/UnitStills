@@ -51,7 +51,15 @@
     },
     {
       "title": "Animal Kingdom",
-      "network": "TNT"
+      "network": "TNT",
+      "folder": "animal-kingdom-tnt",
+      "order": [
+        "ak-shawn-hatosy-313.jpg",
+        "ak-ellen-barkin.jpg",
+        "ak-finn-cole.jpg",
+        "ak-ben-robson.jpg",
+        "ak-shawn-hatosy.jpg"
+      ]
     },
     {
       "title": "Miracle Workers",
@@ -76,7 +84,18 @@
       "folder": "monsters-of-god-tnt",
       "title": "Monsters of God",
       "network": "TNT",
-      "location": ""
+      "location": "",
+      "order": [
+        "mog-hat-tip.jpg",
+        "mog-grizzled-closeup.jpg",
+        "mog-native-portrait-bw.jpg",
+        "mog-street-group.jpg",
+        "mog-candlelit-table.jpg",
+        "mog-native-woman-teal.jpg",
+        "mog-cavalry-officer-bw.jpg",
+        "mog-sergeant.jpg",
+        "mog-blacksmith-bw.jpg"
+      ]
     },
     {
       "folder": "dumpster-dive",
@@ -94,11 +113,17 @@
   "portraits": {
     "title": "Portraits & Key Art",
     "folder": "portraits-key-art",
-    "network": ""
+    "network": "",
+    "order": []
   },
   "bts": {
     "intro": "I spent twelve years on the other side of the camera as a host at MuchMusic and E! News, so I know how to move around talent, publicists and a working set without slowing anyone down. On set I capture the stills, verticals and BTS moments that marketing and social teams actually need, delivered fast and organized for the edit.",
     "images": [
+      {
+        "folder": "bts",
+        "file": "alienist-bts-camera.jpg",
+        "caption": "The Alienist, on set"
+      },
       {
         "folder": "western-APC-unknown",
         "file": "APC_0791.jpg",
@@ -318,6 +343,11 @@
         "alt": "The Alienist character art: Sara Howard with the line \"I will not be bullied.\""
       },
       {
+        "file": "alienist-social-luke-evans.jpg",
+        "caption": "The Alienist · TNT",
+        "alt": "The Alienist social post: Luke Evans seated in period costume, credited @jessegiddings/TNT"
+      },
+      {
         "file": "all-american-social-1.jpg",
         "caption": "All American · The CW",
         "alt": "All American social graphic: Spencer pulling on a Crenshaw beanie under the word TOMORROW"
@@ -331,6 +361,21 @@
         "file": "all-american-social-3.jpg",
         "caption": "All American · The CW",
         "alt": "All American social graphic: three cast portraits split by red diagonal bands"
+      },
+      {
+        "file": "all-american-social-tonight.jpg",
+        "caption": "All American · The CW",
+        "alt": "All American social graphic: Spencer in headphones under the word TONIGHT"
+      },
+      {
+        "file": "all-american-social-tomorrow.jpg",
+        "caption": "All American · The CW",
+        "alt": "All American social graphic: the team celebrating in the locker room under the word TOMORROW"
+      },
+      {
+        "file": "all-american-social-taye-diggs.jpg",
+        "caption": "All American · The CW",
+        "alt": "All American social graphic: Coach Baker at his desk"
       }
     ]
   }
