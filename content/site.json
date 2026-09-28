@@ -204,16 +204,6 @@
         "file": "16553570769_eeb1d1e73a_k.jpg",
         "caption": "",
         "alt": "A small boy in a purple shirt holds a bowl in a doorway"
-      },
-      {
-        "file": "warriorwatch1.jpg",
-        "caption": "Kenya",
-        "alt": "A young Maasai man stands in tall grass"
-      },
-      {
-        "file": "16602275249_4c6cecc509_k.jpg",
-        "caption": "Paro Taktsang, Bhutan",
-        "alt": "The Tiger's Nest monastery on a cliff above a green valley in Bhutan"
       }
     ]
   },
@@ -347,9 +337,9 @@
         "alt": "The Alienist character art: Sara Howard with the line \"I will not be bullied.\""
       },
       {
-        "file": "alienist-social-luke-evans.jpg",
-        "caption": "The Alienist · TNT",
-        "alt": "The Alienist social post: Luke Evans seated in period costume, credited @jessegiddings/TNT"
+        "file": "all-american-social-taye-diggs.jpg",
+        "caption": "All American · The CW",
+        "alt": "All American social graphic: Coach Baker at his desk"
       },
       {
         "file": "all-american-social-1.jpg",
@@ -377,9 +367,9 @@
         "alt": "All American social graphic: the team celebrating in the locker room under the word TOMORROW"
       },
       {
-        "file": "all-american-social-taye-diggs.jpg",
-        "caption": "All American · The CW",
-        "alt": "All American social graphic: Coach Baker at his desk"
+        "file": "alienist-social-luke-evans.jpg",
+        "caption": "The Alienist · TNT",
+        "alt": "The Alienist social post: Luke Evans seated in period costume, credited @jessegiddings/TNT"
       }
     ]
   }
