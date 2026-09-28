@@ -47,7 +47,10 @@
       "folder": "new-girl-s7-fox",
       "title": "New Girl",
       "network": "FOX",
-      "location": "Los Angeles"
+      "location": "Los Angeles",
+      "order": [
+        "NG-S7_HannahKeyArt-JG_0063.jpg"
+      ]
     },
     {
       "title": "Animal Kingdom",

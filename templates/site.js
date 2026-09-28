@@ -171,12 +171,20 @@ function show(i) {
 
   if (item.dataset.platform) return showClip(item);
 
+  // Hide the previous photo while the next one downloads, so a slow
+  // connection never shows the old frame under the new caption.
+  const src = srcFor(item);
   boxImg.hidden = false;
-  boxImg.src = srcFor(item);
+  boxImg.classList.add("loading");
+  boxImg.onload = () => { if (boxImg.getAttribute("src") === src) boxImg.classList.remove("loading"); };
+  boxImg.removeAttribute("src");
   boxImg.alt = item.dataset.alt || "";
-  // Warm the next photo so swiping feels instant.
-  const next = group[(index + 1) % group.length];
-  if (next !== item && !next.dataset.platform) new Image().src = srcFor(next);
+  boxImg.src = src;
+  if (boxImg.complete && boxImg.naturalWidth) boxImg.classList.remove("loading");
+  // Warm the neighbours so swiping either way feels instant.
+  for (const n of [group[(index + 1) % group.length], group[(index - 1 + group.length) % group.length]]) {
+    if (n !== item && !n.dataset.platform) new Image().src = srcFor(n);
+  }
 }
 
 function open(item) {
