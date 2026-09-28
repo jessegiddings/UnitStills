@@ -82,9 +82,13 @@
       "location": "Los Angeles",
       "order": [
         "NG-S7_HannahKeyArt-JG_0063.jpg",
+        "ng-hallway-wedding.jpg",
         "ng-cast-preschool.jpg",
+        "ng-selfie-bed.jpg",
         "ng-jess-nick.jpg",
-        "ng-birthday-party.jpg"
+        "ng-cece-jess.jpg",
+        "ng-birthday-party.jpg",
+        "ng-table-read.jpg"
       ]
     },
     {
@@ -196,6 +200,11 @@
         "folder": "bts",
         "file": "alienist-bts-camera.jpg",
         "caption": "The Alienist, on set"
+      },
+      {
+        "folder": "bts",
+        "file": "ng-slate-cece.jpg",
+        "caption": "New Girl · FOX, on set"
       },
       {
         "folder": "bts",
