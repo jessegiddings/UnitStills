@@ -89,6 +89,7 @@
         "mog-hat-tip.jpg",
         "mog-grizzled-closeup.jpg",
         "mog-native-portrait-bw.jpg",
+        "mog-porch-portrait-bw.jpg",
         "mog-street-group.jpg",
         "mog-candlelit-table.jpg",
         "mog-native-woman-teal.jpg",
@@ -125,14 +126,14 @@
         "caption": "The Alienist, on set"
       },
       {
-        "folder": "western-APC-unknown",
-        "file": "APC_0791.jpg",
-        "caption": "Western, on set"
+        "folder": "bts",
+        "file": "mog-bts-street-rigs.jpg",
+        "caption": "Monsters of God · TNT, on set"
       },
       {
-        "folder": "western-APC-unknown",
-        "file": "APC_0824.jpg",
-        "caption": "Western, on set"
+        "folder": "bts",
+        "file": "mog-bts-lighting-box.jpg",
+        "caption": "Monsters of God · TNT, on set"
       }
     ],
     "recent": [
