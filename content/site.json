@@ -109,6 +109,13 @@
       "title": "Candy Crush",
       "network": "TBS",
       "location": ""
+    },
+    {
+      "folder": "adam-shapiro-editorial",
+      "title": "Adam Shapiro",
+      "network": "Editorial",
+      "location": "PRTZL · Philadelphia Style",
+      "cover_top": true
     }
   ],
   "portraits": {

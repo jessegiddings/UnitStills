@@ -98,6 +98,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .card { position: relative; display: block; overflow: hidden; background: var(--bg-raised); aspect-ratio: 3 / 2; cursor: zoom-in; }
 .card img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease, opacity .4s; }
 .card img.top { object-position: 50% 20%; }
+.card img.top0 { object-position: 50% 0; }
 .card-info {
   position: absolute; inset: auto 0 0; padding: 40px 14px 14px;
   background: linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,0));

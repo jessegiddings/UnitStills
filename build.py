@@ -259,7 +259,8 @@ def build():
                                    stills_tile(p["folder"], files, p["title"], sub, alt,
                                                FORMATS.get(clips[0]["format"], "4 / 5")) if files else ""))
         elif files:
-            cards.append(card(p["folder"], files, p["title"], sub, alt, p.get("captions")))
+            cards.append(card(p["folder"], files, p["title"], sub, alt, p.get("captions"),
+                              cover_class="top0" if p.get("cover_top") else ""))
     for name, clips in clips_by_production.items():
         if name not in listed:  # clip-only production that isn't in site.json yet
             m = clip_meta.get(name, {})
